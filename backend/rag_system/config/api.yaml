@@ -1,0 +1,11 @@
+host: 127.0.0.1
+port: 9000
+top_k_default: 5
+timeout_seconds: 30
+hybrid_config_path: hybrid_retrieval.yaml
+standards_registry_path: ""
+standards_upload_root: ""
+max_upload_bytes: 52428800
+current_collection_id: drilldoc_default
+chat_database_path: ""
+vector_index_path: indexes/chroma

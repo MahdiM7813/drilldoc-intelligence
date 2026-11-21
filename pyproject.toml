@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drilldoc-intelligence"
+version = "0.1.0"
+description = "Evidence-grounded retrieval and question answering for drilling documents."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "chromadb>=1.5",
+  "fastapi>=0.115",
+  "huggingface-hub",
+  "onnxruntime>=1.14.1",
+  "pdfplumber>=0.11",
+  "pydantic>=2.0",
+  "pypdf>=5.0",
+  "python-multipart>=0.0.9",
+  "PyYAML>=6.0",
+  "sentence-transformers>=5.6",
+  "torch",
+  "uvicorn>=0.30",
+]
+
+[project.optional-dependencies]
+llama = ["llama-cpp-python>=0.3.34"]
+qwen = ["transformers"]
+dev = ["httpx"]
+
+[tool.setuptools]
+package-dir = {"" = "backend"}
+
+[tool.setuptools.packages.find]
+where = ["backend"]
+
+[tool.setuptools.package-data]
+rag_system = ["config/*.yaml", "config/*.json"]

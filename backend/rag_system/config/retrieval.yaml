@@ -1,0 +1,17 @@
+embedding:
+  model_name: BAAI/bge-m3
+  device: cpu
+  batch_size: 2
+  normalize_embeddings: true
+  trust_remote_code: false
+  local_files_only: true
+
+vector_store:
+  persist_directory: indexes/chroma
+  text_collection: drilldoc_text
+  table_collection: drilldoc_tables
+
+retrieval:
+  top_k: 5
+  distance_metric: cosine
+  read_only_copy: true

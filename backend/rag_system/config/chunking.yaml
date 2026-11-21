@@ -1,0 +1,8 @@
+target_tokens: 450
+min_tokens: 80
+max_tokens: 750
+prose_overlap_tokens: 60
+table_overlap_tokens: 0
+preserve_clause_boundaries: true
+preserve_table_rows: true
+include_heading_in_embedding_text: true

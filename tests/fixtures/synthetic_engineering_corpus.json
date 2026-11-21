@@ -1,0 +1,22 @@
+{
+  "document_id": "synthetic-qualification-EN",
+  "title": "Synthetic Hydrostatic Qualification Procedure",
+  "clauses": [
+    {"number":"1","title":"Scope","text":"This fictional procedure covers hydrostatic qualification of a closed-loop training pipe spool. It is a synthetic test fixture and describes no real equipment."},
+    {"number":"2","title":"Baseline Conditions","text":"The test water baseline temperature is 20 C. Ambient humidity and spool material grade are intentionally not specified."},
+    {"number":"3","title":"Equipment Rating","text":"The training loop pressure rating is 3.0 MPa. The rating applies to the loop assembly."},
+    {"number":"4","title":"Test Pressure","text":"The required hydrostatic test setpoint is 2.4 MPa. Use the hose pressure limit in Table 3 as a component check."},
+    {"number":"5","title":"Hold Period","text":"Hold the target pressure for 30 minutes on each run. Clause 9 requires three repeated holds."},
+    {"number":"6","title":"Instrumentation","text":"Use gauge G-17 with a range of 0 to 4 MPa and accuracy of 0.02 MPa. The gauge calibration date is not recorded."},
+    {"number":"7","title":"Acceptance Criteria","text":"The maximum allowed visible leakage is 0 mL/min. Stop the test if any leakage is observed."},
+    {"number":"8","title":"Flow Sequence","text":"Follow the low, nominal, then high flow stages in Table 1. The low stage lasts 2 minutes and the nominal stage lasts 3 minutes."},
+    {"number":"9","title":"Repeat Runs","text":"Perform three pressure holds, each using the 30-minute hold period specified in Clause 5. Depressurize between runs."},
+    {"number":"10","title":"Flush and Temperature","text":"Flush for the minimum time in Table 2. The measured baseline was recorded in Clause 2; maximum return temperature is listed in Table 2."}
+  ],
+  "tables": [
+    {"number":"1","title":"Flow Stage Schedule","columns":["Stage","Flow Rate","Duration"],"rows":[["Low","12 L/min","2 min"],["Nominal","18 L/min","3 min"],["High","24 L/min","2 min"]]},
+    {"number":"2","title":"Flush and Temperature","columns":["Parameter","Value"],"rows":[["Minimum flush duration","15 minutes"],["Maximum return temperature","24 C"]]},
+    {"number":"3","title":"Component Pressure Limits","columns":["Component","Maximum Pressure"],"rows":[["Pipe","2.4 MPa"],["Hose","1.8 MPa"],["Gauge","4.0 MPa"]]}
+  ],
+  "intentional_omissions": ["spool material grade", "ambient humidity", "pump manufacturer", "gauge calibration date", "spool outer diameter"]
+}

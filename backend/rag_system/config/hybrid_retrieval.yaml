@@ -1,0 +1,15 @@
+rag04_config: retrieval.yaml
+manifest_path: indexes/index_manifest.json
+bm25:
+  chunk_paths: [chunks/chunks.jsonl]
+hybrid:
+  top_k: 5
+  candidate_pool: 15
+reranking:
+  rrf_k: 60
+  vector_weight: 1.0
+  keyword_weight: 1.2
+  phrase_boost: 0.05
+  definition_boost: 0.035
+  title_boost: 0.06
+  table_defect_boost: 0.02

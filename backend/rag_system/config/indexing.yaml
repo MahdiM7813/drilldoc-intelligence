@@ -1,0 +1,26 @@
+embedding:
+  model_name: BAAI/bge-m3
+  device: cpu
+  batch_size: 2
+  precision: float32
+  normalize_embeddings: true
+  show_progress: true
+  trust_remote_code: false
+  local_files_only: true
+
+vector_store:
+  provider: chromadb
+  persist_directory: indexes/chroma
+  distance_metric: cosine
+  text_collection: drilldoc_text
+  table_collection: drilldoc_tables
+
+indexing:
+  index_table_parents: false
+  require_embedding_text: true
+  fail_on_conflicting_ids: true
+  incremental_by_default: true
+  prune_by_default: false
+
+verification:
+  smoke_test_top_k: 5

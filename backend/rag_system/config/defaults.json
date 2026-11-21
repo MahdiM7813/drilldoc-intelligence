@@ -1,0 +1,23 @@
+{
+  "document_type": "welding_quality_standard",
+  "authority_status": "official_or_unverified",
+  "language": "en",
+  "empty_page_character_threshold": 20,
+  "low_text_character_threshold": 120,
+  "table_detection": {
+    "vertical_strategy": "lines",
+    "horizontal_strategy": "lines"
+  },
+  "verification_terms": [
+    "ISO 5817:2014",
+    "Scope",
+    "Terms and definitions",
+    "Assessment of imperfections",
+    "Table 1",
+    "Crack",
+    "Porosity",
+    "Lack of fusion",
+    "Incomplete root penetration",
+    "quality levels B, C and D"
+  ]
+}

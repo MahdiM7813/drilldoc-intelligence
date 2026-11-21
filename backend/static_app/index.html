@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DrillDoc Intelligence | Drilling Report Analysis</title>
+
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+
+<aside class="side" id="sidebar" aria-label="Conversation history">
+  <div class="brand">
+    <div class="logo">DD</div>
+    <div><b>DrillDoc Intelligence</b><small>Energy</small></div>
+  </div>
+  <button class="new" id="newChat">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+    New chat
+  </button>
+  <h3><span>Chats</span><span id="history-count">0</span></h3>
+  <div class="hist" id="history"></div><p id="history-error" role="status"></p>
+  <footer><button id="settings" class="settings">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+    Settings
+  </button></footer>
+</aside>
+
+<main>
+  <header>
+    <button class="ib mobile-menu" id="menu" aria-label="Open conversations" aria-expanded="false">☰</button><div class="title">
+      <div class="ticon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+      </div>
+      <div><h1>Drilling Report Analysis</h1><p>AI-powered technical document analysis</p></div>
+    </div>
+    <div class="doc" role="status"><span class="dot" id="status-dot"></span><span id="service-status">Checking service…</span></div>
+  </header>
+
+  <section class="feed" id="feed"><div class="wrap" id="wrap" aria-live="polite" aria-relevant="additions">
+    <div class="row ai"><div class="av">DD</div><div class="card">
+      <div class="who">DrillDoc Assistant</div>
+      Ask a question about your configured document collection. Answers require an available index and local model.
+    </div></div>
+  </div></section>
+
+  <div class="comp"><div class="box">
+    <div class="sugg">
+      <button class="chip" data-q="What evidence is available for this question?">What evidence is available?</button>
+      <button class="chip" data-q="Summarize the drilling operations.">Summarize operations</button>
+      <button class="chip" data-q="What was the mud weight at each depth?">Mud weight by depth</button>
+    </div>
+    <div class="input">
+      <button class="ib" disabled title="Chat attachments are not supported. Configure an index separately." aria-label="Attachments unavailable">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11l-9 9a5 5 0 0 1-7-7l9-9a3.5 3.5 0 0 1 5 5l-9 9a2 2 0 0 1-3-3l8-8"/></svg>
+      </button>
+      <input aria-label="Question about the report" id="q" placeholder="Ask a question about the report…" autocomplete="off">
+      <button class="send" id="send" aria-label="Send">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+      </button>
+    </div>
+    <div class="hint">Experimental RAG · Answers use retrieved evidence. Check citations and source documents.</div>
+  </div></div>
+</main>
+
+<script src="/app.js" defer></script>
+<dialog id="settings-dialog" aria-labelledby="settings-title"><h2 id="settings-title">Service status</h2><p>Documents and models are configured on the backend.</p><pre id="diagnostics"></pre><button class="chip" id="refresh-status">Refresh status</button> <button class="chip solid" id="close-settings">Close</button></dialog>
+</body>
+</html>

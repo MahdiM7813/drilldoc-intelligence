@@ -1,0 +1,36 @@
+retrieval:
+  config_path: retrieval.yaml
+  manifest_path: indexes/index_manifest.json
+  top_k: 5
+
+providers:
+  reasoning:
+    type: llama_cpp
+    model_path: models/reasoning.gguf
+    n_ctx: 2048
+    n_batch: 128
+    n_threads: 16
+    n_threads_batch: 16
+    n_gpu_layers: 0
+    max_new_tokens: 256
+    temperature: 0.05
+  formatter:
+    type: llama_cpp
+    model_path: models/reasoning.gguf
+    n_ctx: 2048
+    n_batch: 128
+    n_threads: 16
+    n_threads_batch: 16
+    n_gpu_layers: 0
+    max_new_tokens: 256
+    temperature: 0.0
+    local_files_only: true
+
+answering:
+  generation_timeout_seconds: 180
+  max_evidence_characters: 18000
+  require_citations: true
+  insufficient_evidence_text: Insufficient evidence in the retrieved standard excerpts.
+
+
+

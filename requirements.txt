@@ -1,0 +1,17 @@
+# Direct package pins for CPython 3.11 on Windows x64.
+# Transitive packages are resolved by pip; this is not a hash-locked full graph.
+chromadb==1.5.9
+fastapi==0.141.1
+huggingface-hub==1.31.0
+onnxruntime==1.23.2
+pdfplumber==0.11.10
+pydantic==2.13.5
+pypdf==6.19.0
+python-multipart==0.0.32
+PyYAML==6.0.3
+sentence-transformers==6.0.1
+torch==2.10.0
+uvicorn==0.52.4
+httpx==0.28.1
+setuptools==84.0.0
+llama-cpp-python==0.3.35
